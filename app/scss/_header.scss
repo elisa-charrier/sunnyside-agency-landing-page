@@ -1,3 +1,12 @@
+/* The background is the same for both header and main */
+.wrapper {
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../app/img/mobile/image-header.jpg");
+}
+
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,8 +29,9 @@
         border-top: toRem(1) solid transparent;
         border-left: toRem(24) solid transparent;
         border-bottom: toRem(24) solid $white;
-
         opacity: 0;
+
+        // animation
     }
     
     &__dropdown-menu {
@@ -33,19 +43,45 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        
         width: calc(100vw - #{toRem(25)}*2);
-
         opacity: 0;
+        
         background: $white;
+
+        //animation
     }
 
+    &__hamburger-icon:hover + &__triangle-icon,
     &__hamburger-icon:hover + &__triangle-icon + &__dropdown-menu {
         opacity: 1;
     }
+}
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__title {
+        margin-top: toRem(73);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__arrow {
+        margin-top: toRem(60);
+        margin-bottom: toRem(134);
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    .wrapper {
+        background-image: url("../app/img/desktop/image-header.jpg");
+    }
+
     .header {
         &__hamburger-icon {
             position: absolute;
@@ -61,6 +97,16 @@
             opacity: 1;
 
             background: initial;
+        }
+    }
+
+    .main {
+        &__title {
+            margin-top: toRem(95);
+        }
+        &__arrow {
+            margin-top: toRem(106);
+            margin-bottom: toRem(328);
         }
     }
 }

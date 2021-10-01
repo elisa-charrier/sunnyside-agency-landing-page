@@ -22,6 +22,18 @@ body {
   color: #5a636c;
 }
 
+h1, h2, h3 {
+  color: white;
+  font-family: "Fraunces", serif;
+}
+
+.wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
 .grid-layout {
   display: -ms-grid;
   display: grid;
@@ -31,19 +43,6 @@ body {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
       grid-template-areas: "header header";
-}
-
-.header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: header;
-}
-
-.header {
-  background-image: url("../app/img/mobile/image-header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .a {
@@ -96,6 +95,15 @@ body {
   }
 }
 
+/* The background is the same for both header and main */
+.wrapper {
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../app/img/mobile/image-header.jpg");
+}
+
+/* Header */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,11 +156,44 @@ body {
   background: white;
 }
 
+.header__hamburger-icon:hover + .header__triangle-icon,
 .header__hamburger-icon:hover + .header__triangle-icon + .header__dropdown-menu {
   opacity: 1;
 }
 
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main__title {
+  margin-top: 4.5625rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main__arrow {
+  margin-top: 3.75rem;
+  margin-bottom: 8.375rem;
+}
+
 @media only screen and (min-width: 768px) {
+  .wrapper {
+    background-image: url("../app/img/desktop/image-header.jpg");
+  }
   .header__hamburger-icon {
     position: absolute;
     opacity: 0;
@@ -169,6 +210,13 @@ body {
     width: auto;
     opacity: 1;
     background: initial;
+  }
+  .main__title {
+    margin-top: 5.9375rem;
+  }
+  .main__arrow {
+    margin-top: 6.625rem;
+    margin-bottom: 20.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

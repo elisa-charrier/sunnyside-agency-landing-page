@@ -16,6 +16,13 @@ body {
     color: $veryDarkGrayishBlue;
 }
 
+h1, h2, h3 {
+    color: $white;
+    font-family: $fancyFontFamily;
+}
+
+.wrapper {grid-area: header;}
+
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -24,14 +31,6 @@ body {
     grid-template-areas: 
         "header header"
         ;
-}
-
-.header {grid-area: header;}
-
-.header {
-    background-image: url("../app/img/mobile/image-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .a {
@@ -76,7 +75,7 @@ body {
 
         &--header {
             margin-right: toRem(28);
-            
+
             color: $white;
         }
     }
