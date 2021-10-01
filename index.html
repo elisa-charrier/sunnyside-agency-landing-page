@@ -6,10 +6,26 @@
     
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./app/img/favicon-32x32.png">
-    
+
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
-<body>
+<body class="grid-layout">
+    <!-- Header -->
+    <header class="header">
+        <img src="./app/img/logo.svg" alt="Sunnyside" class="header__logo">
+        
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <img class="header__hamburger-icon" src="./app/img/icon-hamburger.svg" alt="Menu">
+            <div class="header__triangle-icon"></div>
+            <div class="header__dropdown-menu">
+                <a href="#" class="a a--header">About</a>
+                <a href="#" class="a a--header">Services</a>
+                <a href="#" class="a a--header">Projects</a>
+                <button class="button button--header">Contact</button>
+            </div>
+        </nav>
+    </header>
     
 </body>
 </html>
