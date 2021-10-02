@@ -13,24 +13,31 @@ body {
     font-family: $fontFamily;
     font-size: toRem(18);
     font-weight: $semiBoldFontWeight;
+    text-align: center;
     color: $veryDarkGrayishBlue;
 }
 
-h1, h2, h3 {
-    color: $white;
+h1, h2 {
     font-family: $fancyFontFamily;
+    font-size: toRem(30);
 }
-
-.wrapper {grid-area: header;}
-
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "header header"
-        ;
+h1 {
+    font-weight: $fancyBlackFontWeight;
+    line-height: toRem(50);
+    text-transform: uppercase;
+    color: $white;
+}
+h2 {
+    font-weight: $fancyBoldFontWeight;
+    line-height: toRem(38);
+    text-align: center;
+    color: $veryDarkDesaturatedBlue;
+}
+.article--graphic-design > h2 {
+    color: $darkDesaturatedCyan;
+}
+.article--photography > h2 {
+    color: $darkBlue;
 }
 
 .a {
@@ -44,12 +51,16 @@ h1, h2, h3 {
 
 .button {
     background: none;
-	color: inherit;
 	border: none;
 	padding: 0;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+
+    font-family: $fancyFontFamily;
+    font-weight: $fancyBoldFontWeight;
+    text-transform: uppercase;
+    color: $veryDarkDesaturatedBlue;
 
     &--header {
         height: toRem(57);
@@ -60,25 +71,47 @@ h1, h2, h3 {
 
         background: $yellow;
 
-        text-transform: uppercase;
-        font-family: $fancyFontFamily;
-        font-weight: $fancyBoldFontWeight;
         font-size: toRem(12);
-        color: $veryDarkDesaturatedBlue;
+        
     }
+    &--article {
+        position: relative;
+        margin-top: toRem(42);
+
+        font-size: toRem(13);
+    }
+    &--article::before {
+        content: "";
+
+        position: absolute;
+        bottom: -3px;
+        left: -6px;
+        
+        width: calc(100% + #{toRem(6)}*2);
+        height: toRem(10);
+        border-radius: toRem(5);
+        z-index: -1;
+
+        background-color: $yellow;
+        opacity: .25;
+    }
+    &--article-softRed::before {background: $softRed;}
 }
 
-@media only screen and (min-width: 768px) {
-    .grid-layout {
-        grid-template-columns: repeat(12, 1fr);
-        width: 100%;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "header header header header header header header header header header header header"
-            ""
-            ;
-    }
 
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: toRem(42);
+    }
+    h2 {
+        font-size: toRem(38);
+        line-height: toRem(48);
+    }
+    .article--transform > h2, 
+    .article--stand-out > h2 {
+        text-align: left;
+    }
     .a {
         margin: 0;
 
@@ -95,6 +128,12 @@ h1, h2, h3 {
         
         &--header {
             background: $white;
+        }
+
+        &--article {
+            margin-top: toRem(52);
+
+            text-align: left;
         }
     }
 }

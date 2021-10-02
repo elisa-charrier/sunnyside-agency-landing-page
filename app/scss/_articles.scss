@@ -1,0 +1,66 @@
+.article {
+    place-self: center center;
+ 
+    &__image {
+        width: 100%;
+    }
+
+    &--transform, &--stand-out {
+        padding: toRem(71) toRem(30);
+    }
+    &--transform > &__abstract, 
+    &--stand-out > &__abstract {
+        margin-top: toRem(40);
+        font-size: toRem(18);
+        line-height: toRem(32);
+    }
+
+    &--graphic-design, &--photography {
+        width: 100%;
+        padding: toRem(400) toRem(25) toRem(60) toRem(25);
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-image: url("../app/img/mobile/image-graphic-design.jpg");
+        
+        color: $darkDesaturatedCyan;
+    }
+    &--photography {
+        background-image: url("../app/img/mobile/image-photography.jpg");
+        
+        color: $darkBlue;
+    }
+    &--graphic-design > &__abstract, &--photography > &__abstract {
+        margin: 0 auto;
+        margin-top: toRem(36);
+        font-size: toRem(16);
+        line-height: toRem(28);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .article {
+        &--transform, &--stand-out {
+            margin-left: toRem(50);
+            padding: 0;
+            max-width: toRem(440);
+        }
+        &--transform > &__abstract, 
+        &--stand-out > &__abstract {
+            margin-top: toRem(50);
+            text-align: left;
+        }
+        
+        &--graphic-design {
+            background-image: url("../app/img/desktop/image-graphic-design.jpg");
+        }
+        &--photography {
+            background-image: url("../app/img/desktop/image-photography.jpg");
+        }
+        &--graphic-design > &__abstract,
+        &--photography > &__abstract {
+            max-width: toRem(330);
+        }
+    }
+}
