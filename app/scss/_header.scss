@@ -1,19 +1,13 @@
-/* The background is the same for both header and main */
-.wrapper {
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../app/img/mobile/image-header.jpg");
-}
-
-/* Header */
 .header {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: toRem(32) toRem(25);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: toRem(25);
-    padding-top: toRem(32);
 
     &__nav {
         position: relative;
@@ -23,14 +17,13 @@
         position: absolute;
         top: calc(100% + #{toRem(25)});
         right: 0;
-
         width: 0;
         height: 0;
         border-top: toRem(1) solid transparent;
         border-left: toRem(24) solid transparent;
         border-bottom: toRem(24) solid $white;
+        
         opacity: 0;
-
         // animation
     }
     
@@ -38,17 +31,15 @@
         position: absolute;
         top: calc(100% + #{toRem(25+24)});
         right: 0;
+        width: calc(100vw - #{toRem(25)}*2);
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         
-        width: calc(100vw - #{toRem(25)}*2);
         opacity: 0;
-        
         background: $white;
-
         //animation
     }
 
@@ -58,35 +49,19 @@
     }
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    &__title {
-        margin-top: toRem(73);
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    &__arrow {
-        margin-top: toRem(60);
-        margin-bottom: toRem(134);
-    }
-}
-
 @media only screen and (min-width: 768px) {
-    .wrapper {
-        background-image: url("../app/img/desktop/image-header.jpg");
-    }
-
     .header {
+        padding: toRem(32) toRem(40);
+
+        &__logo {
+            width: toRem(170);
+        }
+
         &__hamburger-icon {
             position: absolute;
             opacity: 0;
         }
+
         &__dropdown-menu {
             flex-direction: row;
             justify-content: flex-end;
@@ -97,16 +72,6 @@
             opacity: 1;
 
             background: initial;
-        }
-    }
-
-    .main {
-        &__title {
-            margin-top: toRem(95);
-        }
-        &__arrow {
-            margin-top: toRem(106);
-            margin-bottom: toRem(328);
         }
     }
 }

@@ -1,11 +1,11 @@
 .article {
-    place-self: center center;
- 
+
     &__image {
         width: 100%;
     }
 
-    &--transform, &--stand-out {
+    // first articles layout
+    &--transform > &__content, &--stand-out > &__content {
         padding: toRem(71) toRem(30);
     }
     &--transform > &__abstract, 
@@ -15,27 +15,63 @@
         line-height: toRem(32);
     }
 
+    // second articles layout
     &--graphic-design, &--photography {
-        width: 100%;
-        padding: toRem(400) toRem(25) toRem(60) toRem(25);
-
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-image: url("../app/img/mobile/image-graphic-design.jpg");
-        
+        position: relative;
+    }
+    &--graphic-design , &--graphic-design > h2{
         color: $darkDesaturatedCyan;
     }
-    &--photography {
-        background-image: url("../app/img/mobile/image-photography.jpg");
-        
+    &--photography, &--photography > h2 {
         color: $darkBlue;
+    }
+    &--graphic-design > &__content, &--photography > &__content {
+        position: absolute;
+        bottom: toRem(60);
+        left: 0;
+        margin: toRem(25);
     }
     &--graphic-design > &__abstract, &--photography > &__abstract {
         margin: 0 auto;
         margin-top: toRem(36);
         font-size: toRem(16);
         line-height: toRem(28);
+    }
+
+    // Client testimonials article
+    &--testimonials {
+        padding: toRem(68) toRem(38) toRem(90) toRem(38);
+    }
+    &--testimonials > h2 {
+        font-size: toRem(13);
+        font-weight: $fancyBlackFontWeight;
+        line-height: toRem(13);
+        letter-spacing: toRem(6);
+        text-transform: uppercase;
+        color: $grayishBlue;
+    }
+    &__section--testimonial {
+        margin-top: toRem(63);
+
+
+        & > .section__icon {
+            width: toRem(72);
+            border-radius: 50%;
+        }
+        & > .section__message {
+            margin-top: toRem(42);
+        }
+        & > .section__user {
+            margin-top: toRem(28);
+            font-size: toRem(13);
+            line-height: toRem(23);
+
+            color: $grayishBlue;
+        }
+        & > .section__user-role {
+            margin-top: toRem(17);
+            
+        }
     }
 }
 
@@ -62,5 +98,9 @@
         &--photography > &__abstract {
             max-width: toRem(330);
         }
+    }
+    .article--transform > h2, 
+    .article--stand-out > h2 {
+        text-align: left;
     }
 }

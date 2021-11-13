@@ -1,0 +1,49 @@
+.hero {
+    //position: relative;
+    display: flex;
+    justify-content: center;
+
+    // usare tag picture in html e sistemare questa parte
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-top: toRem(90);
+        text-transform: uppercase;
+    }
+
+    &__arrow {
+        margin-top: toRem(50);
+        margin-bottom: toRem(134);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        &__background {
+            &--mobile {
+                display: none;
+            }
+            &--desktop {
+                display: block;
+            }
+        }
+
+        &__content {
+            top: 25%;
+        }
+
+        &__arrow {
+            margin-top: toRem(106);
+        }
+    }
+}

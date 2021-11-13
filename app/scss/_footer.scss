@@ -1,0 +1,54 @@
+.footer {
+    background-color: $darkModerateCyan;
+    color: $darkCyan;
+    font-size: toRem(13);
+    line-height: toRem(13);
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        & .gallery__image {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: toRem(64) toRem(40) toRem(80) toRem(17);
+        max-width: toRem(768px); //forse meno
+        
+    }
+
+    &__logo {
+        filter: brightness(0) saturate(100%) invert(41%) sepia(4%) saturate(4724%) hue-rotate(105deg) brightness(91%) contrast(91%);
+    }
+
+    &__nav {
+        display: grid;
+        justify-content: center;
+
+        &--menu {
+            grid-template-columns: repeat(3, 1fr);
+            
+            margin-top: toRem(46);
+        }
+        &--social {
+            grid-template-columns: repeat(4, toRem(20));
+            grid-template-rows: toRem(20);
+            gap: toRem(28);
+
+            margin-top: toRem(88);
+            line-height: 0;
+        }
+    }
+
+    &__attribution {
+        padding: toRem(5);
+
+        a {
+            color: $softRed;
+            font-style: italic;
+        }
+        
+    }
+}
