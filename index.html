@@ -9,60 +9,161 @@
 
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
-<body class="grid-layout">
-    <div class="wrapper">
-    
-        <!-- Header -->
-        <header class="header">
-            <img src="./app/img/logo.svg" alt="Sunnyside" class="header__logo">
-            
-            <!-- Navigation -->
-            <nav class="header__nav">
-                <img class="header__hamburger-icon" src="./app/img/icon-hamburger.svg" alt="Menu">
-                <div class="header__triangle-icon"></div>
-                <div class="header__dropdown-menu">
-                    <a href="#" class="a a--header">About</a>
-                    <a href="#" class="a a--header">Services</a>
-                    <a href="#" class="a a--header">Projects</a>
-                    <button class="button button--header button--yellow">Contact</button>
-                </div>
-            </nav>
-        </header>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img src="./app/img/logo.svg" alt="Sunnyside" class="header__logo">
         
-        <!-- Main -->
-        <main class="main">
-            <h1 class="main__title">We are creatives</h1>
-            <img src="./app/img/icon-arrow-down.svg" alt="Arrow down" class="main__arrow">
-        </main>
-    </div>
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <img class="header__hamburger-icon" src="./app/img/icon-hamburger.svg" alt="Menu">
+            <div class="header__triangle-icon"></div>
+            <div class="header__dropdown-menu">
+                <a href="#" class="a a--header">About</a>
+                <a href="#" class="a a--header">Services</a>
+                <a href="#" class="a a--header">Projects</a>
+                <button class="button button--header button--yellow">Contact</button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero -->
+    <main class="hero">
+        <!-- picture da sistemare -->
+        <img class="hero__background hero__background--mobile" src="./app/img/mobile/image-header.jpg" alt="header background">
+        <img class="hero__background hero__background--desktop" src="./app/img/desktop/image-header.jpg" alt="header background">
+        
+        <div class="hero__content"> <!-- classe inutile su mobile -->
+            <h1 class="hero__title">We are creatives</h1>
+            <img class="hero__arrow" src="./app/img/icon-arrow-down.svg" alt="Arrow down">
+        </div>
+    </main>
+    
 
     <!-- Article 1: transform -->
-    <img src="./app/img/mobile/image-transform.jpg" alt="Egg image" class="article__image article__image--transform">
     <article class="article article--transform">
-        <h2 class="article__title">Transform your <br>brand</h2>
-        <p class="article__abstract">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <button class="button button--article">Learn more</button>
+        <img class="article__image" src="./app/img/mobile/image-transform.jpg" alt="Egg image">
+        
+        <div class="article__content">
+            <h2 class="article__title">Transform your <br>brand</h2>
+            <p class="article__abstract">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <button class="button button--article">Learn more</button>
+        </div>
     </article>
 
     <!-- Article 2: stand out -->
-    <img src="./app/img/mobile/image-stand-out.jpg" alt="Egg image" class="article__image article__image--stand-out">
     <article class="article article--stand-out">
-        <h2 class="article__title">Stand out to the right audience</h2>
-        <p class="article__abstract">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <button class="button button--article button--article-softRed">Learn more</button>
+        <img class="article__image" src="./app/img/mobile/image-stand-out.jpg" alt="Glass image">
+
+        <div class="article__content">
+            <h2 class="article__title">Stand out to the right audience</h2>
+            <p class="article__abstract">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+            <button class="button button--article button--article-softRed">Learn more</button>
+        </div>
     </article>
 
     <!-- Article 3: graphic design -->
     <article class="article article--graphic-design">
-        <h2 class="article__title">Graphic design</h2>
-        <p class="article__abstract">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        <img class="article__image" src="./app/img/mobile/image-graphic-design.jpg" alt="Cherries image">
+
+        <div class="article__content">
+            <h2 class="article__title">Graphic design</h2>
+            <p class="article__abstract">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
     </article>
-    
+   
     <!-- Article 4: photography -->
     <article class="article article--photography">
-        <h2 class="article__title">Graphic design</h2>
-        <p class="article__abstract">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        <img class="article__image" src="./app/img/mobile/image-photography.jpg" alt="Tangerine image">
+
+        <div class="article__content">
+            <h2 class="article__title">Photography</h2>
+            <p class="article__abstract">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
     </article>
 
+    <!-- Client testimonials -->
+    <article class="article article--testimonials">
+        <h2>Client testimonials</h2>
+
+        <section class="article__section--testimonial">
+            <img class="section__icon" src="./app/img/image-emily.jpg" alt="Emily's profile image">
+            <p class="section__message">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+            <p class="section__user">
+                <strong>Emily R.</strong><br>
+                <span class="section__user-role">Marketing Director</span>
+            </p>
+        </section>
+
+        <section class="article__section--testimonial">
+            <img class="section__icon" src="./app/img/image-thomas.jpg" alt="Emily's profile image">
+            <p class="section__message">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+            <p class="section__user">
+                <strong>Thomas S.</strong><br>
+                <span class="section__user-role">Chief Operating Officer</span>
+            </p>
+        </section>
+
+        <section class="article__section--testimonial">
+            <img class="section__icon" src="./app/img/image-jennie.jpg" alt="Emily's profile image">
+            <p class="section__message">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+            <p class="section__user">
+                <strong>Jennie F.</strong><br>
+                <span class="section__user-role">Business Owner</span>
+            </p>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Gallery -->
+        <div class="footer__gallery">
+            <picture class="gallery__image">
+                <source srcset="./app/img/desktop/image-gallery-milkbottles.jpg"
+                media="(min-width: 768px)">
+                <img class="gallery__image" src="./app/img/mobile/image-gallery-milkbottles.jpg" alt="Milkbottles">
+            </picture>
+            <picture class="gallery__image">
+                <source srcset="./app/img/desktop/image-gallery-orange.jpg"
+                media="(min-width: 768px)">
+                <img class="gallery__image" src="./app/img/mobile/image-gallery-orange.jpg" alt="Orange">
+            </picture>
+            <picture class="gallery__image">
+                <source srcset="./app/img/desktop/image-gallery-cone.jpg"
+                media="(min-width: 768px)">
+                <img class="gallery__image" src="./app/img/mobile/image-gallery-cone.jpg" alt="Cone">
+            </picture>
+            <picture class="gallery__image">
+                <source srcset="./app/img/desktop/image-gallery-sugar-cubes.jpg"
+                media="(min-width: 768px)">
+                <img class="gallery__image" src="./app/img/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes">
+            </picture>
+        </div>
+
+        <div class="footer__content">
+            <img src="./app/img/logo.svg" alt="Sunnyside" class="footer__logo">
+
+            <!-- Footer menu -->
+            <nav class="footer__nav footer__nav--menu">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+            </nav>
+
+            <!-- Social Links -->
+            <nav class="footer__nav footer__nav--social">
+                <a href="#"><img src="./app/img/icon-facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="./app/img/icon-instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="./app/img/icon-twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="./app/img/icon-pinterest.svg" alt="Pinterest"></a>
+            </nav>
+        </div>
+
+        <!-- Attribution -->
+        <div class="footer__attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/elisa-charrier" target="_blank">Elisa Charrier</a>.
+        </div>
+    </footer>
 </body>
 </html>
