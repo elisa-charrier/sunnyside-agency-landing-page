@@ -51,7 +51,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - This is an amazing article about css grid.
+- [How to change the color of an svg element?](https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element) and [CSS filter generator to convert from black to target hex color](https://codepen.io/sosuke/pen/Pjoqqp) - I used this resources to transform the svg logo's color from white to dark cyan in the footer.
 
 ## Author
 
